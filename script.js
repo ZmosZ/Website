@@ -1,4 +1,3 @@
-const menu = document.querySelector("#menu");
 const nav = document.querySelector(".links");
 let timeoutId;
 
@@ -21,14 +20,9 @@ function closeNav(){
     document.getElementById('main').style.marginLeft = '0';
 }
 
-menu.onclick = () => {
-    menu.classList.toggle('bo-x');
-    nav.classList.toggle('active');
-}
 
 document.querySelectorAll('.links a').forEach(link => {
     link.onclick = () => {
-        menu.classList.remove('bo-x');
         nav.classList.remove('active');
     }
 });
